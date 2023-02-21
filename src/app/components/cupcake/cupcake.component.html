@@ -1,18 +1,18 @@
-<div class="cupcake-container">
+<div *ngIf="cupcake" class="cupcake-container">
   <div class="cupcake">
     <img [src]="cupcake.url" alt="accessory" />
     <div class="cream">
       <div
-      class="cream-1"
-        [ngStyle]="{backgroundColor: cupcake.color1}"
+        class="cream-1"
+        [ngStyle]="{ backgroundColor: cupcake.color1 }"
       ></div>
       <div
-      class="cream-2"
-        [ngStyle]="{backgroundColor: cupcake.color2}"
+        class="cream-2"
+        [ngStyle]="{ backgroundColor: cupcake.color2 }"
       ></div>
       <div
-      class="cream-3"
-        [ngStyle]="{backgroundColor: cupcake.color3}"
+        class="cream-3"
+        [ngStyle]="{ backgroundColor: cupcake.color3 }"
       ></div>
     </div>
     <div class="bottom">
@@ -28,5 +28,5 @@
     </div>
   </div>
 
-  <div class="cupcake-name">{{cupcake.name}}</div>
+  <div class="cupcake-name">{{ cupcake.name }}</div>
 </div>
