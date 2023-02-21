@@ -33,6 +33,10 @@ body {
   justify-content: center;
 }
 
+code {
+  font-family: monospace;
+}
+
 button {
   border: none;
   width: 160px;
@@ -47,6 +51,11 @@ h1 {
 
 h2 {
   font-size: 1.5em;
+}
+
+#link-to-instructions {
+  cursor: pointer;
+  color: var(--secondary-color);
 }
 
 .main-container {

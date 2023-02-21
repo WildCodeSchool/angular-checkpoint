@@ -2,26 +2,27 @@
 <div class="instructions">
   <h2>🍪 Step 1 - Get the cupcakes</h2>
   <p>
-    You started a json server when running <code>npm run dev</code>. You can
-    check the API is available at
-    <a href="http://localhost:4000">localhost:4000</a>.
+    You started a json server when running <code>npm start</code>. You can check
+    the API available at
+    <a href="http://localhost:4000" target="_blank">localhost:4000</a>.
     <br />
     Your first mission is to get the cupcakes from the API.
     <br />
     Add an instance of HttpClient in the <code>api-service</code> and fetch the
-    <a href="http://localhost:4000/cupcakes">localhost:4000/cupcakes</a>
+    <a href="http://localhost:4000/cupcakes" target="_blank"
+      >localhost:4000/cupcakes</a
+    >
     endpoint.
     <br />
-    In the <code>CupcakeList</code> component (
-    <code>src/app/pages/cupcake-list</code>), use the service function value on
-    ngOnInit and subscribe the function. Then, get response in an property.
-    <br />
-    You can check the result with a <code>console.log</code> for this step.
+    In the <code>CupcakeList</code> component
+    (<code>src/app/pages/cupcake-list</code>), use the service in order to
+    assign the result of the http request to the attribute
+    <code>cupcakes</code>.
   </p>
   <details>
     <summary>Hint</summary>
-    You will need a property to store the cupcakes. Use an empty array as
-    initial value.
+    You have to create a class or an interface to describe and type a cupcake
+    object (<code>src/app/shared/cupcake.model.ts</code>).
   </details>
 
   <h2>🧁 Step 2 - Show all the cupcakes</h2>
@@ -37,21 +38,21 @@
   <p>
     For this step, get the accessory list from the API.
     <br />
-    As below, Add an instance of HttpClient in the <code>api-service</code> and
+    As below, add an instance of HttpClient in the <code>api-service</code> and
     fetch the
-    <a href="http://localhost:4000/cupcakes">localhost:4000/cupcakes</a>
+    <a href="http://localhost:4000/accessories" target="_blank"
+      >localhost:4000/accessories</a
+    >
     endpoint.
     <br />
     In the <code>CupcakeList</code> component (
-    <code>src/app/pages/cupcake-list</code>), use the service function value on
-    ngOnInit and subscribe the function. Then, get response in an property.
-    <br />
-    Once again, you can check the result with a <code>console.log</code>.
+    <code>src/app/pages/cupcake-list</code>), use the service in order to assign
+    the result of the http request.
   </p>
   <details>
     <summary>Hint</summary>
-    You will need an other property to store the accessories (initialized with
-    an empty array).
+    You will need an other attribute, <code>accessories</code>, to store the
+    result. Don't forget to create your model...
   </details>
 
   <h2>🧁 Step 4 - Fill the accessories selector</h2>
@@ -88,10 +89,10 @@
   </p>
   <details>
     <summary>Hint</summary>
-    You will need a last property to store the selected accessory (initialized with
-    an empty string). Bind it with the
+    You will need a last property to store the selected accessory (initialized
+    with an empty string). Bind it with the
     <code>select</code> using the <code>value</code> and
-    <code>onChange</code> attributes.
+    <code>change</code> attributes.
   </details>
 
   <h2>⭐ Bonus - Create a whole page</h2>
@@ -105,4 +106,11 @@
     <br />
     In the page, get the cupcake from the id and display it.
   </p>
+  <details>
+    <summary>Hint</summary>
+    Use the appropriate endpoint :
+    <a href="http://localhost:4000/cupcakes/1" target="_blank"
+      >localhost:4000/cupcakes/:id</a
+    >.
+  </details>
 </div>
